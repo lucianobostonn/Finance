@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "id": "4578",
+      "name": "Reunião",
+      "orcamento": "430000",
+      "categoria": {
+        "id": "1",
+        "name": "Infraestrutura"
+      },
+      "cost": 30000,
+      "services": [
+        {
+          "name": "Jantar",
+          "cost": "30000",
+          "description": "Levar aquela mboa no Epic Sana",
+          "id": "3431c287-2ed8-4914-8b2b-040453a26925"
+        }
+      ]
+    },
+    {
+      "id": "3e6e",
+      "name": "Jantar",
+      "orcamento": "100000",
+      "categoria": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 27000,
+      "services": [
+        {
+          "name": "Festejar",
+          "cost": "27000",
+          "description": "Está comprovado",
+          "id": "acbe255a-d370-4ab4-9bac-eaddbbf4b8c8"
+        }
+      ]
+    },
+    {
+      "id": "954e",
+      "name": "Teste de Design",
+      "orcamento": "30000",
+      "categoria": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infraestrutura"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
+}

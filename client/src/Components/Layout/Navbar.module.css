@@ -1,0 +1,107 @@
+.topo{
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+    flex-wrap: wrap;
+}
+
+.topo ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.topo img{
+    height: 70px;
+}
+
+.item{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0px 20px;
+}
+
+.item:hover{
+    color: goldenrod;
+    transition: .5s;
+}
+
+.menu{
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    ul, .item{
+        display: none;
+        margin: 0px;
+    }
+    .topo{
+        display: flex;
+        flex-flow: row; 
+    }
+    
+    .nav{
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+    }
+
+    .menuList{
+        margin-right: 30px;
+    }
+
+    .menu{
+        display: inline;
+        color: white;
+        font-size: 2em;
+        
+    }
+
+    .menu:hover{
+        color: gray;
+        box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.342);
+        border-radius: 20px;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .fechar{
+        display: inline;
+        color: white;
+        font-size: 2em;
+        margin-top: 10px;
+    }
+
+    .fechar:hover{
+        color: gray;
+        transition: .5s;
+    }
+    
+    .menuVisible{
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, grey, #202020);
+        border-radius: 10px;
+      }
+    
+      .menuVisible .item {
+        margin: 10px 20px;
+      }
+
+      .itemVisible{
+        display: flex;
+        background-color: #202020;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .itemVisible:hover{
+        background-color: #494949;
+      }
+}

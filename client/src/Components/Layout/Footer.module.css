@@ -1,0 +1,32 @@
+.baixo{
+    background-color: #1b1b1b;
+    height: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.icones{
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones svg{
+    font-size: 1.7em;
+}
+
+.baixo p strong{
+    color: goldenrod;
+}
+
+.link{
+    color: whitesmoke;
+}
+
+.link:hover{
+    color: goldenrod;
+    transition: .5s;
+}
