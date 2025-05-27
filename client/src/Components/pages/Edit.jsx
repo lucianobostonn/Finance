@@ -12,11 +12,12 @@ function Edit(){
     const {id} = useParams()
     const [projeto, setProjeto] = useState([])
     const [services, setServices] = useState([])
+    const baseURL = "https://backend-finance-ftzg.onrender.com"
 
     
     useEffect(()=>{
         setTimeout(()=>{
-            fetch(`http://localhost:5000/projects/${id}`,{
+            fetch(`${baseURL}/projects/${id}`,{
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -40,7 +41,7 @@ function Edit(){
     const[type, setType] = useState()
     
     useEffect(()=>{
-        fetch("http://localhost:5000/categories", {
+        fetch(`${baseURL}/categories`, {
             method: "GET",
             headers: {
                 'Content.Type': 'application/json'
@@ -70,7 +71,7 @@ function Edit(){
             return false
         }
 
-        fetch(`http://localhost:5000/projects/${projeto.id}`,{
+        fetch(`${baseURL}/projects/${projeto.id}`,{
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -110,7 +111,7 @@ function Edit(){
 
         project.cost = newCost;  
 
-        fetch(`http://localhost:5000/projects/${project.id}`, {
+        fetch(`${baseURL}/projects/${project.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -132,7 +133,7 @@ function Edit(){
         projectUpdated.services = servicesUpdate 
         projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
 
-        fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+        fetch(`${baseURL}/projects/${projectUpdated.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

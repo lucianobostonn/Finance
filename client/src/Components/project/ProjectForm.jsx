@@ -5,9 +5,10 @@ import { useEffect, useState } from "react"
 function ProjectForm({handleSubmit, projectData}){
     const[categories, setCategories] = useState([])
     const[project, setProject] = useState(projectData || {})
+    const baseURL = "https://backend-finance-ftzg.onrender.com"
     
     useEffect(()=>{
-        fetch("http://localhost:5000/categories", {
+        fetch(`${baseURL}/categories`, {
             method: "GET",
             headers: {
                 'Content.Type': 'application/json'

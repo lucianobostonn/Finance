@@ -6,13 +6,14 @@ function NewProject(){
 
     var navigate = useNavigate()
     const state = {message: "Projeto criado com sucesso!"}
+    const baseURL = "https://backend-finance-ftzg.onrender.com"
 
     function CriarProjeto(project) {
         // Inicializar custo e serviço
         project.cost = 0;
         project.services = [];
     
-        fetch("http://localhost:5000/projects", {
+        fetch(`${baseURL}/projects`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",

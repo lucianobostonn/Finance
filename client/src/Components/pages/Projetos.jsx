@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 function Projetos(){
     const [projects, setProjects] = useState([])
     const[exibirMensagem, setExibirMensagem] = useState("")
+    const baseURL = "https://backend-finance-ftzg.onrender.com"
     
     const Location = useLocation()
     var message = ""
@@ -18,7 +19,7 @@ function Projetos(){
 
     useEffect(()=>{
 
-        fetch("http://localhost:5000/projects", {
+        fetch(`${baseURL}/projects`, {
             method: "GET",
             headers: {
                 "Content.Type": "application/json",
@@ -33,7 +34,7 @@ function Projetos(){
 
 
     function RemoverProjeto(id){
-            fetch(`http://localhost:5000/projects/${id}`, {
+            fetch(`${baseURL}/projects/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
